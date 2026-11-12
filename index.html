@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Selamat Hari Guru Nasional - Suhu dan Kalor</title>
+<style>
+:root{--bg:linear-gradient(160deg,#e8f2ff,#fff8e1);--c:#fff;--t:#14284b;--p:#1e5bc6;--g:#f5b301;--r:#d62839;--s:0 6px 20px #1e5bc622}
+body.dark{--bg:linear-gradient(160deg,#0b1730,#1b1230);--c:#17254a;--t:#eef3ff;--s:0 6px 20px #0006}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--t);min-height:100vh;padding-bottom:70px}
+header{position:sticky;top:0;z-index:20;display:flex;gap:6px;align-items:center;padding:8px 10px;background:var(--p);color:#fff;flex-wrap:wrap}
+header b{flex:1;font-size:14px;min-width:120px}header button{background:#ffffff33;border:0;border-radius:10px;padding:6px 9px;color:#fff;font-size:16px;cursor:pointer}
+header input{width:70px}
+#prog{height:6px;background:#ffffff44;width:100%}#prog i{display:block;height:100%;background:var(--g);width:0;transition:.5s}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--c);box-shadow:0 -3px 15px #0003;z-index:20}
+nav button{flex:1;border:0;background:none;padding:8px 2px;font-size:11px;color:var(--t);cursor:pointer}nav button span{display:block;font-size:20px}
+nav button.on{color:var(--r);font-weight:700}
+.pg{display:none;max-width:900px;margin:auto;padding:14px;animation:in .5s}.pg.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(20px)}to{opacity:1}}
+.card{background:var(--c);border-radius:20px;padding:16px;margin:12px 0;box-shadow:var(--s)}
+h1,h2,h3{margin:.3em 0}h2{color:var(--p)}body.dark h2{color:var(--g)}
+.btn{background:linear-gradient(135deg,var(--p),#3d8bff);color:#fff;border:0;border-radius:30px;padding:12px 22px;font-size:16px;font-weight:700;cursor:pointer;margin:4px;transition:.2s}
+.btn:hover{transform:scale(1.07)}.btn.g{background:linear-gradient(135deg,#f5b301,#ff9100);color:#222}.btn.r{background:linear-gradient(135deg,#d62839,#ff5a5f)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.f{background:var(--c);border-left:6px solid var(--g);border-radius:12px;padding:10px;margin:8px 0}
+#splash{position:fixed;inset:0;z-index:50;background:radial-gradient(circle at 50% 30%,#2f7bff,#0b2a6b 70%);color:#fff;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;overflow:hidden}
+#splash h1{font-size:clamp(26px,7vw,52px);color:#ffd54a;text-shadow:0 3px 12px #0008}
+.book{font-size:90px;animation:fl 3s infinite}@keyframes fl{50%{transform:translateY(-14px) rotate(4deg)}}
+.pulse{animation:pu 1.2s infinite}@keyframes pu{50%{transform:scale(1.12);box-shadow:0 0 25px #ffd54a}}
+.sp{position:absolute;width:8px;height:8px;border-radius:50%;background:#ffe27a;animation:up linear infinite;opacity:.8}
+@keyframes up{from{transform:translateY(105vh)}to{transform:translateY(-10vh)}}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;padding:12px;border-radius:12px;border:2px solid #9bb7e8;background:var(--c);color:var(--t);font-size:15px;cursor:pointer}
+.opt:hover{border-color:var(--g)}.opt.ok{background:#2ecc71;color:#fff;animation:pop .4s}.opt.no{background:#e74c3c;color:#fff;animation:shk .4s}
+@keyframes pop{50%{transform:scale(1.05)}}@keyframes shk{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}.tabs button{border:0;border-radius:20px;padding:8px 12px;background:#cfe0ff;cursor:pointer;color:#14284b}.tabs button.on{background:var(--r);color:#fff}
+input[type=number],input[type=text]{padding:10px;border-radius:10px;border:2px solid #9bb7e8;font-size:16px;width:100%;margin:4px 0;background:var(--c);color:var(--t)}
+.bar{height:12px;border-radius:8px;background:#cfe0ff;overflow:hidden}.bar i{display:block;height:100%;background:var(--r);width:0}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #9bb7e8;padding:6px;font-size:14px}
+.cf{position:fixed;top:-20px;width:10px;height:14px;z-index:60;animation:dr linear forwards}@keyframes dr{to{transform:translateY(110vh) rotate(720deg)}}
+.fl{position:absolute;animation:sw 4s ease-in-out infinite;font-size:28px}@keyframes sw{50%{transform:translateY(-18px) rotate(15deg)}}
+svg{max-width:100%}.big{font-size:22px;font-weight:700}
+</style></head><body>
+
+<div id="splash">
+<div id="spk"></div>
+<div class="book">📖</div>
+<h1>SELAMAT HARI GURU NASIONAL</h1>
+<p style="font-size:18px">Belajar Suhu dan Kalor Bersama Guru Hebat</p>
+<p style="font-size:30px;margin:6px">👩‍🏫 🌡️ 🔥 🧊 👦👧</p>
+<p><i>Terima Kasih Guruku, Jasamu Selalu Dikenang</i></p>
+<button class="btn g pulse" onclick="start()">MULAI BELAJAR</button>
+<button class="btn" id="sbtn" onclick="tgSfx()">🔊 Suara: Nyala</button>
+</div>
+
+<header><b>🎓 Hari Guru • Suhu &amp; Kalor</b>
+<button onclick="tgSfx()" title="Efek suara" id="b1">🔊</button>
+<button onclick="tgMus()" title="Musik latar" id="b2">🎵</button>
+<input type="range" min="0" max="1" step=".1" value=".5" oninput="vol=+this.value" title="Volume">
+<button onclick="document.body.classList.toggle('dark')" title="Mode gelap/terang">🌓</button>
+<button onclick="go('help')" title="Petunjuk">❓</button>
+<div id="prog"><i></i></div></header>
+
+<main>
+<section class="pg" id="home">
+<div class="card" style="background:linear-gradient(135deg,#1e5bc6,#3d8bff);color:#fff">
+<h1>Selamat Hari Guru Nasional! 🎉</h1>
+<p>Guru adalah pelita yang menerangi jalan ilmu. Hari ini kita belajar IPA tentang <b>Suhu dan Kalor</b> sebagai ungkapan terima kasih kepada para guru.</p>
+<svg viewBox="0 0 300 130" width="100%"><rect x="10" y="10" width="170" height="90" rx="8" fill="#0f5132"/><rect x="10" y="10" width="170" height="90" rx="8" fill="none" stroke="#c68a3a" stroke-width="6"/>
+<text x="25" y="45" fill="#fff" font-size="15">Q = m × c × ΔT</text><text x="25" y="75" fill="#ffd54a" font-size="13">Suhu &amp; Kalor 🔥</text>
+<circle cx="230" cy="40" r="16" fill="#ffd9b3"/><path d="M205 105 Q230 55 255 105Z" fill="#d62839"/><rect x="222" y="22" width="16" height="6" fill="#4a2c0a"/><line x1="195" y1="75" x2="165" y2="45" stroke="#ffd9b3" stroke-width="5"/>
+<rect x="10" y="105" width="280" height="8" fill="#c68a3a"/></svg></div>
+<div class="card"><h3>🎯 Tujuan Pembelajaran</h3><ul><li>Menjelaskan konsep suhu, termometer, dan skala suhu.</li><li>Menjelaskan kalor, perpindahan kalor, dan perubahan wujud.</li><li>Menggunakan rumus Q = m × c × ΔT.</li></ul></div>
+<div class="grid">
+<button class="btn" onclick="go('suhu')">📘 Mulai Materi</button>
+<button class="btn g" onclick="go('lab')">🧪 Eksperimen</button>
+<button class="btn r" onclick="go('game')">🎮 Permainan</button>
+<button class="btn" onclick="go('kuis')">📝 Kuis</button>
+<button class="btn g" onclick="go('ucapan')">💐 Ucapan untuk Guru</button></div>
+<div class="card" id="best"></div>
+</section>
+
+<section class="pg" id="suhu">
+<h2>🌡️ Materi Suhu</h2>
+<div class="card"><h3>Pengertian Suhu</h3><p>Suhu adalah <b>ukuran derajat panas atau dinginnya suatu benda</b>. Satuan SI suhu adalah Kelvin (K). Suhu diukur dengan <b>termometer</b>.</p></div>
+<div class="card"><h3>Termometer &amp; Jenisnya</h3><ul><li><b>Termometer zat cair</b> (raksa/alkohol): cuaca, laboratorium.</li><li><b>Termometer klinis</b>: suhu badan, skala 35–42°C.</li><li><b>Termometer digital / inframerah</b>: pengukuran cepat.</li><li><b>Termometer ruang</b>: suhu ruangan.</li></ul>
+<p><b>Cara mengukur:</b> 1) Pegang termometer di bagian atas, 2) Celupkan/tempelkan ujung (reservoir) pada benda, 3) Tunggu skala stabil, 4) Baca dengan mata sejajar skala.</p></div>
+<div class="card"><h3>Skala Suhu</h3><table><tr><th>Skala</th><th>Titik beku</th><th>Titik didih</th><th>Bagian</th></tr><tr><td>Celsius (°C)</td><td>0</td><td>100</td><td>100</td></tr><tr><td>Reamur (°R)</td><td>0</td><td>80</td><td>80</td></tr><tr><td>Fahrenheit (°F)</td><td>32</td><td>212</td><td>180</td></tr><tr><td>Kelvin (K)</td><td>273</td><td>373</td><td>100</td></tr></table>
+<div class="f">C : R : (F−32) : (K−273) = 5 : 4 : 9 : 5<br>°F = (9/5 × °C) + 32 &nbsp; • &nbsp; K = °C + 273 &nbsp; • &nbsp; °R = 4/5 × °C</div></div>
+<div class="card"><h3>🧮 Kalkulator Konversi</h3><input type="number" id="cin" placeholder="Masukkan suhu dalam °C" oninput="conv()"><div id="cout" class="big"></div></div>
+<div class="card"><h3>Contoh Soal</h3><p>Suhu 50°C sama dengan berapa °F?</p><div class="f">°F = (9/5 × 50) + 32 = 90 + 32 = <b>122°F</b></div>
+<p>Contoh sehari-hari: tubuh sehat ±37°C, air mendidih 100°C, es 0°C, ruangan sejuk ±25°C.</p></div>
+<button class="btn" onclick="go('kalor')">Lanjut: Kalor ➜</button>
+</section>
+
+<section class="pg" id="kalor">
+<h2>🔥 Materi Kalor</h2>
+<div class="card"><h3>Pengertian Kalor</h3><p>Kalor adalah <b>energi panas yang berpindah</b> dari benda bersuhu tinggi ke benda bersuhu rendah. Satuannya Joule (J) atau kalori (1 kal = 4,2 J).</p>
+<div class="f"><b>Suhu</b>: ukuran panas/dinginnya benda, diukur termometer (°C, K).<br><b>Kalor</b>: energi yang berpindah, bergantung massa, jenis zat, dan perubahan suhu.</div></div>
+<div class="card"><h3>Perpindahan Kalor</h3><ul><li>🥄 <b>Konduksi</b>: melalui zat padat tanpa zat berpindah (sendok di teh panas).</li><li>🌊 <b>Konveksi</b>: disertai perpindahan zat (air mendidih, angin laut).</li><li>☀️ <b>Radiasi</b>: tanpa zat perantara (panas matahari).</li></ul></div>
+<div class="card"><h3>Perubahan Wujud</h3><p>Padat → cair: <b>melebur</b> • Cair → padat: <b>membeku</b> • Cair → gas: <b>menguap</b> • Gas → cair: <b>mengembun</b> • Padat → gas: <b>menyublim</b> • Gas → padat: <b>mengkristal</b>.<br>Saat berubah wujud, kalor diserap/dilepas dan <b>suhu zat tetap</b>.</p></div>
+<div class="card"><h3>Pengaruh Kalor terhadap Suhu</h3><div class="f big">Q = m × c × ΔT</div>
+<p>Q = kalor (Joule) • m = massa (kg) • c = kalor jenis (J/kg°C) • ΔT = perubahan suhu (°C)</p>
+<p><b>Contoh:</b> 2 kg air (c = 4200) dipanaskan dari 20°C ke 50°C. Q = 2 × 4200 × 30 = <b>252.000 J</b>.</p>
+<h3>🧮 Kalkulator Kalor</h3>
+<input type="number" id="qm" placeholder="Massa (kg)" oninput="qc()"><input type="number" id="qc" placeholder="Kalor jenis (J/kg°C), air = 4200" oninput="qc()"><input type="number" id="qt" placeholder="Perubahan suhu ΔT (°C)" oninput="qc()"><div id="qo" class="big"></div></div>
+<div class="card"><p>Contoh dalam kehidupan: memasak air, setrika, angin darat/laut, jemuran kering oleh matahari, pendingin ruangan.</p></div>
+<button class="btn g" onclick="go('lab')">Lanjut: Eksperimen ➜</button>
+</section>
+
+<section class="pg" id="lab">
+<h2>🧪 Eksperimen IPA</h2>
+<div class="card"><div class="tabs" id="stabs"></div>
+<div id="stage" style="text-align:center;margin-top:10px"></div>
+<div class="bar"><i id="sbar"></i></div>
+<div style="text-align:center"><button class="btn g" onclick="simGo()">▶ MULAI</button><button class="btn" onclick="simPause()">⏸ PAUSE</button><button class="btn r" onclick="simReset()">↺ RESET</button></div>
+<div class="big" id="sread" style="text-align:center"></div>
+<div class="f" id="sinfo"></div></div>
+</section>
+
+<section class="pg" id="game">
+<h2>🎮 Game Edukasi</h2>
+<div class="card" id="gmenu"><p>Pilih permainan (8 soal, ada timer dan skor):</p>
+<button class="btn" onclick="gStart('alat')">🌡️ Tebak Alat Ukur</button>
+<button class="btn g" onclick="gStart('istilah')">🔗 Cocokkan Istilah</button>
+<button class="btn r" onclick="gStart('kalor')">♨️ Tebak Perpindahan Kalor</button>
+<button class="btn" onclick="gStart('cepat')">⚡ Jawab Cepat (8 detik)</button>
+<button class="btn g" onclick="gStart('kata')">🔤 Susun Kata</button></div>
+<div class="card" id="gplay" style="display:none"></div>
+</section>
+
+<section class="pg" id="kuis">
+<h2>📝 Kuis Suhu dan Kalor</h2>
+<div class="card" id="qbox"></div>
+</section>
+
+<section class="pg" id="ucapan">
+<h2>💐 Ucapan Hari Guru</h2>
+<div class="card" style="position:relative;overflow:hidden;text-align:center;background:linear-gradient(135deg,#fff3c4,#ffd6e0);color:#14284b" id="ubox">
+<span class="fl" style="left:5%;top:10%">🌸</span><span class="fl" style="left:85%;top:15%;animation-delay:1s">🌺</span><span class="fl" style="left:20%;bottom:10%;animation-delay:2s">⭐</span><span class="fl" style="left:75%;bottom:12%;animation-delay:.5s">🌟</span><span class="fl" style="left:50%;top:3%;animation-delay:1.5s">🌷</span>
+<h1>Selamat Hari Guru Nasional</h1>
+<p style="font-size:40px;margin:4px">👩‍🏫 🧑‍🏫 👦👧</p>
+<p>Terima kasih kepada seluruh guru yang telah memberikan ilmu, membimbing, dan menginspirasi kami. Setiap ilmu yang diberikan menjadi cahaya bagi masa depan.</p>
+<input type="text" id="gname" placeholder="Tulis nama guru..." style="max-width:320px">
+<br><button class="btn r" onclick="thanks()">💌 Tampilkan Pesan Terima Kasih</button>
+<div id="tmsg" class="big" style="margin:10px"></div></div>
+</section>
+
+<section class="pg" id="help">
+<h2>❓ Petunjuk Penggunaan</h2>
+<div class="card"><ul><li>Gunakan menu bawah untuk berpindah halaman.</li><li>🔊 efek suara, 🎵 musik latar, geser slider untuk volume, 🌓 mode gelap/terang.</li><li>Baca materi Suhu dan Kalor, lalu coba Eksperimen (MULAI, PAUSE, RESET).</li><li>Mainkan Game dan kerjakan Kuis. Skor terbaik tersimpan di perangkatmu.</li><li>Bar kuning di atas menunjukkan progres belajarmu.</li></ul>
+<button class="btn" onclick="go('home')">🏠 Kembali ke Beranda</button></div>
+</section>
+</main>
+
+<nav id="nav"></nav>
+
+<script>
+var sfx=true,mus=false,vol=.5,ac=null,mt=null;
+var st={seen:[],best:0};
+try{Object.assign(st,JSON.parse(localStorage.getItem('hg')||'{}'))}catch(e){}
+function save(){try{localStorage.setItem('hg',JSON.stringify(st))}catch(e){}}
+function $(s){return document.querySelector(s)}
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function tone(f,d,ty){if(!sfx&&ty!=='m')return;try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();var o=ac.createOscillator(),g=ac.createGain();o.type='sine';o.frequency.value=f;g.gain.value=vol*.15;o.connect(g);g.connect(ac.destination);o.start();g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+d);o.stop(ac.currentTime+d)}catch(e){}}
+function good(){tone(660,.15);setTimeout(function(){tone(880,.25)},150)}
+function bad(){tone(200,.4)}
+function tgSfx(){sfx=!sfx;$('#b1').textContent=sfx?'🔊':'🔇';$('#sbtn').textContent='🔊 Suara: '+(sfx?'Nyala':'Mati');if(sfx)tone(600,.1)}
+function tgMus(){mus=!mus;$('#b2').style.opacity=mus?1:.5;clearInterval(mt);if(mus){var n=[523,659,784,659,587,698,880,698],i=0;mt=setInterval(function(){tone(n[i++%8],.35,'m')},450)}}
+$('#b2').style.opacity=.5;
+function start(){$('#splash').style.display='none';tone(700,.2);go('home')}
+for(var i=0;i<25;i++){var s=document.createElement('i');s.className='sp';s.style.left=Math.random()*100+'%';s.style.animationDuration=4+Math.random()*6+'s';s.style.animationDelay=-Math.random()*8+'s';$('#spk').appendChild(s)}
+var pages=[['home','🏠','Beranda'],['suhu','🌡️','Suhu'],['kalor','🔥','Kalor'],['lab','🧪','Lab'],['game','🎮','Game'],['kuis','📝','Kuis'],['ucapan','💐','Ucapan']];
+$('#nav').innerHTML=pages.map(function(p){return '<button data-p="'+p[0]+'" onclick="go(\''+p[0]+'\')"><span>'+p[1]+'</span>'+p[2]+'</button>'}).join('');
+function go(id){
+ document.querySelectorAll('.pg').forEach(function(e){e.classList.remove('on')});$('#'+id).classList.add('on');
+ document.querySelectorAll('#nav button').forEach(function(b){b.classList.toggle('on',b.dataset.p===id)});
+ if(id!=='home'&&id!=='help'&&st.seen.indexOf(id)<0){st.seen.push(id);save()}
+ if(id!=='lab')simPause();
+ $('#prog i').style.width=Math.round(st.seen.length/6*100)+'%';
+ $('#best').innerHTML='📊 Progres belajar: <b>'+Math.round(st.seen.length/6*100)+'%</b> • 🏆 Skor kuis terbaik: <b>'+st.best+'</b>/100';
+ if(id==='kuis'&&!qz.on)qStart();
+ if(id==='ucapan')confetti();
+ window.scrollTo(0,0);tone(500,.08)}
+function confetti(){var c=['#f5b301','#d62839','#1e5bc6','#fff','#2ecc71'];for(var i=0;i<70;i++){var d=document.createElement('div');d.className='cf';d.style.left=Math.random()*100+'%';d.style.background=c[i%5];d.style.animationDuration=2+Math.random()*2+'s';document.body.appendChild(d);setTimeout(function(x){x.remove()},4500,d)}}
+function thanks(){var n=$('#gname').value.trim()||'Guruku tercinta';$('#tmsg').innerHTML='💖 Terima kasih, <u>'+n.replace(/[<>&]/g,'')+'</u>! Jasamu abadi di hati kami. 💖';confetti();good()}
+function conv(){var v=parseFloat($('#cin').value);if(isNaN(v)){$('#cout').innerHTML='';return}
+ $('#cout').innerHTML=v+'°C = '+(v*9/5+32).toFixed(1)+'°F = '+(v+273).toFixed(1)+' K = '+(v*4/5).toFixed(1)+'°R'}
+function qc(){var m=parseFloat($('#qm').value),c=parseFloat($('#qc').value),t=parseFloat($('#qt').value);
+ $('#qo').innerHTML=(isNaN(m)||isNaN(c)||isNaN(t))?'':'Q = '+m+' × '+c+' × '+t+' = '+(m*c*t).toLocaleString('id-ID')+' J'}
+
+/* ===== SIMULASI ===== */
+var sims=[
+{n:'🧊 Es Mencair',info:'Saat es dipanaskan, es menyerap kalor untuk melebur. Selama melebur, suhu tetap 0°C. Setelah semua es mencair, suhu air baru naik.',
+ h:'<svg viewBox="0 0 300 190" width="320"><rect x="90" y="40" width="120" height="110" rx="8" fill="none" stroke="#6aa" stroke-width="4"/><rect id="w" x="94" y="140" width="112" height="6" fill="#4aa8ff"/><rect id="i" x="115" y="80" width="70" height="60" rx="6" fill="#d7f3ff" stroke="#8cd"/><text id="fl" x="150" y="185" font-size="34" text-anchor="middle">🔥</text></svg>',
+ u:function(p){var ic=60*(1-Math.min(p,60)/60);$('#i').setAttribute('height',ic);$('#i').setAttribute('y',140-ic);var wh=6+50*Math.min(p,60)/60;$('#w').setAttribute('height',wh);$('#w').setAttribute('y',146-wh);
+  return p<60?'Suhu: 0°C (es melebur)':'Suhu air: '+(((p-60)/40)*30).toFixed(1)+'°C'}},
+{n:'♨️ Air Dipanaskan',info:'Kalor yang diserap air menambah energi gerak molekul sehingga suhu naik hingga mendidih 100°C (Q = m × c × ΔT).',
+ h:'<svg viewBox="0 0 300 190" width="320"><rect x="40" y="20" width="26" height="120" rx="13" fill="#eee" stroke="#888"/><rect id="th" x="46" y="140" width="14" height="0" fill="#d62839"/><circle cx="53" cy="150" r="14" fill="#d62839"/><path d="M110 70h130v80q0 20-20 20h-90q-20 0-20-20z" fill="#7cc4ff" stroke="#357"/><g id="bb" opacity="0"><circle cx="150" cy="130" r="6" fill="#fff"/><circle cx="190" cy="110" r="5" fill="#fff"/><circle cx="215" cy="135" r="7" fill="#fff"/></g><text x="175" y="188" font-size="28" text-anchor="middle">🔥🔥</text></svg>',
+ u:function(p){var h=120*p/100;$('#th').setAttribute('height',h);$('#th').setAttribute('y',140-h);$('#bb').setAttribute('opacity',p>75?1:0);return 'Suhu air: '+(25+75*p/100).toFixed(1)+'°C'}},
+{n:'🥄 Sendok Panas',info:'Kalor merambat pada logam secara konduksi: partikel yang panas menggetarkan partikel di sebelahnya. Logam adalah konduktor yang baik.',
+ h:'<svg viewBox="0 0 300 120" width="320"><g id="sg"></g><text x="10" y="30" font-size="30">🔥</text><text x="10" y="112" font-size="12" fill="currentColor">Ujung dipanaskan → pegangan</text></svg>',
+ u:function(p){var s='';for(var k=0;k<8;k++){var a=Math.max(0,Math.min(1,(p-k*10)/30));s+='<rect x="'+(45+k*28)+'" y="45" width="28" height="26" fill="hsl('+(210-210*a)+',80%,'+(60-10*a)+'%)"/>'}$('#sg').innerHTML=s;return 'Panas merambat: '+Math.round(p)+'%'}},
+{n:'☀️ Radiasi Matahari',info:'Kalor Matahari sampai ke Bumi melalui radiasi tanpa zat perantara (melewati ruang hampa). Benda gelap menyerap lebih banyak kalor.',
+ h:'<svg viewBox="0 0 300 190" width="320"><text x="150" y="60" font-size="60" text-anchor="middle" id="sun">☀️</text><g id="ry" stroke="#f5b301" stroke-width="3"></g><rect id="gr" x="40" y="150" width="220" height="30" rx="6" fill="#6b4f2a"/></svg>',
+ u:function(p){var s='';for(var k=0;k<5;k++){var y=80+((p*2+k*20)%60);s+='<line x1="'+(90+k*30)+'" y1="'+y+'" x2="'+(100+k*30)+'" y2="'+(y+14)+'"/>'}$('#ry').innerHTML=s;$('#sun').setAttribute('font-size',60+4*Math.sin(p));$('#gr').setAttribute('fill','hsl('+(30-30*p/100)+',60%,'+(30+10*p/100)+'%)');return 'Suhu tanah: '+(28+17*p/100).toFixed(1)+'°C'}},
+{n:'🌊 Konveksi Air',info:'Air di dasar yang dipanaskan memuai, massa jenis turun, lalu naik. Air dingin di atas turun mengisi tempatnya, terbentuk arus konveksi.',
+ h:'<svg viewBox="0 0 300 190" width="320"><rect x="70" y="30" width="160" height="120" rx="10" fill="#7cc4ff55" stroke="#357" stroke-width="3"/><g id="pt"></g><text x="150" y="185" font-size="26" text-anchor="middle">🔥</text></svg>',
+ u:function(p){var s='';for(var k=0;k<10;k++){var t=(p*.25+k/10)*6.283,x=150+55*Math.cos(t),y=90-45*Math.sin(t);s+='<circle cx="'+x+'" cy="'+y+'" r="7" fill="'+(Math.cos(t)>0?'#d62839':'#2a7fff')+'"/>'}$('#pt').innerHTML=s;return 'Air panas naik (merah), air dingin turun (biru)'}}];
+var si=0,sp=0,st2=null;
+function simTabs(){$('#stabs').innerHTML=sims.map(function(s,i){return '<button class="'+(i===si?'on':'')+'" onclick="simSel('+i+')">'+s.n+'</button>'}).join('');$('#stage').innerHTML=sims[si].h;$('#sinfo').textContent='🔬 '+sims[si].info;sp=0;simDraw()}
+function simSel(i){simPause();si=i;simTabs()}
+function simDraw(){$('#sbar').style.width=sp+'%';$('#sread').textContent=sims[si].u(sp)}
+function simGo(){if(st2)return;if(sp>=100)sp=0;tone(440,.1);st2=setInterval(function(){sp=Math.min(100,sp+.5);simDraw();if(sp>=100){simPause();good()}},50)}
+function simPause(){clearInterval(st2);st2=null}
+function simReset(){simPause();sp=0;simDraw()}
+simTabs();
+
+/* ===== KUIS ===== */
+var Q=[
+['Mudah','Alat untuk mengukur suhu disebut...',['Barometer','Termometer','Higrometer','Amperemeter'],1,'Termometer adalah alat ukur suhu.'],
+['Mudah','Titik didih air pada skala Celsius adalah...',['50°C','80°C','100°C','212°C'],2,'Air murni mendidih pada 100°C (tekanan 1 atm).'],
+['Mudah','Satuan SI untuk suhu adalah...',['Celsius','Fahrenheit','Reamur','Kelvin'],3,'Satuan SI suhu adalah Kelvin (K).'],
+['Mudah','Satuan SI untuk kalor adalah...',['Joule','Watt','Newton','Pascal'],0,'Kalor adalah energi, satuannya Joule.'],
+['Mudah','Kalor selalu berpindah dari benda bersuhu...',['Rendah ke tinggi','Tinggi ke rendah','Sama ke sama','Tidak ada pola'],1,'Kalor mengalir dari suhu tinggi ke suhu rendah.'],
+['Mudah','Perpindahan kalor dari Matahari ke Bumi terjadi secara...',['Konduksi','Konveksi','Radiasi','Kondensasi'],2,'Radiasi tidak memerlukan zat perantara.'],
+['Mudah','Sendok logam menjadi panas saat dicelup ke teh panas. Ini contoh...',['Konduksi','Konveksi','Radiasi','Evaporasi'],0,'Kalor merambat pada zat padat tanpa zat berpindah: konduksi.'],
+['Mudah','Perubahan wujud padat menjadi cair disebut...',['Membeku','Menguap','Melebur','Mengembun'],2,'Padat menjadi cair = melebur.'],
+['Sedang','Angin laut terjadi karena perpindahan kalor secara...',['Konduksi','Konveksi','Radiasi','Induksi'],1,'Udara hangat naik dan udara dingin bergerak mengisi: konveksi.'],
+['Sedang','0°C sama dengan...',['0°F','32°F','100°F','273°F'],1,'°F = (9/5 × 0) + 32 = 32°F.'],
+['Sedang','Suhu 50°C jika dinyatakan dalam Reamur adalah...',['30°R','40°R','50°R','62,5°R'],1,'°R = 4/5 × 50 = 40°R.'],
+['Sedang','Suhu 27°C sama dengan... Kelvin.',['246 K','273 K','300 K','327 K'],2,'K = 27 + 273 = 300 K.'],
+['Sedang','Selama es melebur, suhu es dan air campuran...',['Naik terus','Turun terus','Tetap','Tidak tentu'],2,'Kalor dipakai mengubah wujud, bukan menaikkan suhu.'],
+['Sedang','Gagang panci dibuat dari plastik karena plastik adalah...',['Konduktor','Isolator','Radiator','Konvektor'],1,'Isolator menghantarkan kalor dengan buruk.'],
+['Sedang','Faktor yang memengaruhi kalor untuk menaikkan suhu benda adalah...',['Warna dan bentuk','Massa, kalor jenis, ΔT','Volume saja','Tekanan udara'],1,'Q = m × c × ΔT.'],
+['Sedang','Termometer klinis memiliki rentang skala sekitar...',['0–100°C','35–42°C','−10–50°C','100–200°C'],1,'Termometer klinis dirancang untuk suhu tubuh 35–42°C.'],
+['Sulit','Kalor yang diperlukan untuk memanaskan 2 kg air (c = 4200 J/kg°C) sebesar 10°C adalah...',['8.400 J','42.000 J','84.000 J','840.000 J'],2,'Q = 2 × 4200 × 10 = 84.000 J.'],
+['Sulit','0,5 kg besi (c = 450 J/kg°C) dipanaskan dari 20°C ke 100°C. Kalornya...',['4.500 J','18.000 J','22.500 J','36.000 J'],1,'Q = 0,5 × 450 × 80 = 18.000 J.'],
+['Sulit','Benda dengan kalor jenis besar berarti...',['Cepat panas','Sulit berubah suhu','Tidak menyerap kalor','Selalu cair'],1,'Kalor jenis besar: dibutuhkan banyak kalor untuk menaikkan suhu 1°C.'],
+['Sulit','Pada skala Fahrenheit, selisih titik didih dan titik beku air adalah...',['80','100','180','212'],2,'212 − 32 = 180 bagian.']];
+var qz={i:0,s:0,on:false,done:false};
+function qStart(){qz={i:0,s:0,on:true,done:false};qShow()}
+function qShow(){var q=Q[qz.i],b=$('#qbox');
+ b.innerHTML='<div class="bar"><i style="width:'+(qz.i/20*100)+'%"></i></div><p>Soal '+(qz.i+1)+'/20 • Tingkat: <b>'+q[0]+'</b></p><h3>'+q[1]+'</h3>'+q[2].map(function(o,k){return '<button class="opt" onclick="qAns('+k+')">'+'ABCD'[k]+'. '+o+'</button>'}).join('')+'<div id="qex"></div>'}
+function qAns(k){if(qz.done)return;qz.done=true;var q=Q[qz.i],bs=document.querySelectorAll('#qbox .opt');
+ bs[k].classList.add(k===q[3]?'ok':'no');if(k!==q[3])bs[q[3]].classList.add('ok');
+ if(k===q[3]){qz.s++;good()}else bad();
+ $('#qex').innerHTML='<div class="f">'+(k===q[3]?'✅ Benar! ':'❌ Salah. ')+q[4]+'</div><button class="btn" onclick="qNext()">'+(qz.i<19?'Soal berikutnya ➜':'Lihat hasil 🏁')+'</button>'}
+function qNext(){qz.done=false;qz.i++;if(qz.i<20){qShow();return}
+ var sc=qz.s*5;if(sc>st.best){st.best=sc;save()}qz.on=false;
+ $('#qbox').innerHTML='<h2>🏁 Hasil Kuis</h2><p class="big">Skor: '+sc+'/100</p><p>✅ Benar: '+qz.s+' • ❌ Salah: '+(20-qz.s)+'</p><p>'+(sc>=80?'Luar biasa! Gurumu pasti bangga 🌟':sc>=60?'Bagus! Terus belajar 💪':'Ayo belajar lagi, kamu pasti bisa! 📚')+'</p><p>🏆 Skor terbaik: '+st.best+'</p><button class="btn" onclick="qStart()">🔄 Ulangi Kuis</button>';
+ if(sc>=60)confetti()}
+
+/* ===== GAME ===== */
+var G={
+alat:[['🌡️ Alat untuk mengukur suhu badan manusia',['Termometer klinis','Termometer ruang','Barometer','Stopwatch'],0],['🏠 Alat untuk mengukur suhu udara dalam ruangan',['Termometer klinis','Termometer ruang','Higrometer','Neraca'],1],['🔬 Termometer berisi raksa atau alkohol disebut termometer...',['Digital','Zat cair','Bimetal','Klinis'],1],['📡 Pengukur suhu cepat tanpa menyentuh benda',['Termometer inframerah','Penggaris','Jangka sorong','Amperemeter'],0],['🌤️ Alat pengukur tekanan udara',['Termometer','Barometer','Dinamometer','Higrometer'],1],['⚖️ Alat untuk mengukur massa benda',['Neraca','Termometer','Mistar','Voltmeter'],0],['⏱️ Alat untuk mengukur waktu',['Stopwatch','Termometer','Neraca','Mistar'],0],['💧 Alat pengukur kelembapan udara',['Higrometer','Barometer','Termometer','Anemometer'],0]],
+istilah:[['Melebur',['Padat menjadi cair','Cair menjadi gas','Gas menjadi cair','Cair menjadi padat'],0],['Menguap',['Padat menjadi cair','Cair menjadi gas','Gas menjadi cair','Cair menjadi padat'],1],['Mengembun',['Gas menjadi cair','Padat menjadi gas','Cair menjadi padat','Padat menjadi cair'],0],['Membeku',['Gas menjadi cair','Cair menjadi padat','Padat menjadi gas','Cair menjadi gas'],1],['Kalor',['Ukuran panas benda','Energi panas yang berpindah','Alat ukur suhu','Satuan massa'],1],['Suhu',['Energi panas yang berpindah','Ukuran derajat panas/dingin benda','Perubahan wujud','Jenis zat'],1],['Konduktor',['Penghantar kalor yang baik','Penghantar kalor yang buruk','Alat ukur','Sumber panas'],0],['Isolator',['Penghantar kalor yang baik','Penghantar kalor yang buruk','Sumber panas','Satuan kalor'],1]],
+kalor:[['🥄 Gagang sendok logam ikut panas di dalam sup',['Konduksi','Konveksi','Radiasi'],0],['☀️ Badan terasa hangat saat berjemur',['Konduksi','Konveksi','Radiasi'],2],['🍲 Air di panci naik-turun saat mendidih',['Konduksi','Konveksi','Radiasi'],1],['🔥 Hangat saat duduk dekat api unggun',['Konduksi','Konveksi','Radiasi'],2],['🍳 Wajan menjadi panas di atas kompor',['Konduksi','Konveksi','Radiasi'],0],['🌬️ Angin laut pada siang hari',['Konduksi','Konveksi','Radiasi'],1],['🔌 Setrika panas menyetrika baju',['Konduksi','Konveksi','Radiasi'],0],['🛰️ Panas Matahari melewati ruang hampa',['Konduksi','Konveksi','Radiasi'],2]],
+kata:[['SUHU','Derajat panas atau dingin benda'],['KALOR','Energi panas yang berpindah'],['KONDUKSI','Perpindahan kalor pada zat padat'],['KONVEKSI','Perpindahan kalor disertai zat'],['RADIASI','Perpindahan kalor tanpa zat perantara'],['TERMOMETER','Alat ukur suhu'],['CELSIUS','Skala dengan titik didih air 100'],['KELVIN','Satuan SI suhu']]};
+var g=null,gt=null;
+function gStart(m){var items=m==='cepat'?shuf([].concat(G.alat,G.istilah,G.kalor)).slice(0,8):shuf(G[m]).slice(0,8);
+ g={m:m,it:items,i:0,s:0,t:0,lock:false,max:m==='cepat'?8:m==='kata'?25:15};$('#gmenu').style.display='none';$('#gplay').style.display='block';gShow()}
+function gShow(){clearInterval(gt);var it=g.it[g.i],h='<div style="display:flex;justify-content:space-between"><b>Soal '+(g.i+1)+'/8</b><b>⭐ Skor: '+g.s+'</b><b id="gtm">⏱ '+g.max+'</b></div><div class="bar"><i id="gb" style="width:100%;background:var(--g)"></i></div>';g.lock=false;g.t=g.max;
+ if(g.m==='kata'){h+='<h3>Susun huruf menjadi kata:</h3><p class="big" style="letter-spacing:6px">'+shuf(it[0].split('')).join(' ')+'</p><p>💡 '+it[1]+'</p><input type="text" id="gin" placeholder="Ketik jawaban"><button class="btn" onclick="gKata()">Jawab</button>'}
+ else if(g.m==='istilah'){h+='<h3>Apa pengertian dari <u>'+it[0]+'</u>?</h3>'+gOpts(it)}
+ else h+='<h3>'+it[0]+'</h3>'+gOpts(it);
+ h+='<div id="gfb" class="big"></div>';$('#gplay').innerHTML=h;
+ gt=setInterval(function(){g.t--;var e=$('#gtm');if(e)e.textContent='⏱ '+g.t;var b=$('#gb');if(b)b.style.width=(g.t/g.max*100)+'%';if(g.t<=0){clearInterval(gt);gDone(false,'⏰ Waktu habis!')}},1000)}
+function gOpts(it){g.o=it[1];return it[1].map(function(o,k){return '<button class="opt" onclick="gAns('+k+')">'+o+'</button>'}).join('')}
+function gAns(k){if(g.lock)return;var it=g.it[g.i],ok=k===it[2],bs=document.querySelectorAll('#gplay .opt');bs[k].classList.add(ok?'ok':'no');bs[it[2]].classList.add('ok');gDone(ok)}
+function gKata(){if(g.lock)return;var it=g.it[g.i],ok=$('#gin').value.trim().toUpperCase()===it[0];gDone(ok,ok?'':'Jawaban: '+it[0])}
+function gDone(ok,msg){if(g.lock)return;g.lock=true;clearInterval(gt);if(ok){g.s+=10+Math.max(0,g.t);good()}else bad();
+ var f=$('#gfb');if(f)f.innerHTML=(ok?'🎉 Benar! +'+(10+Math.max(0,g.t)):'😢 '+(msg||'Salah!'));
+ setTimeout(function(){g.i++;if(g.i<8)gShow();else gEnd()},1300)}
+function gEnd(){var p=g.s;$('#gplay').innerHTML='<h2>🏁 Hasil Akhir</h2><p class="big">Skor: '+p+'</p><p>'+(p>=120?'Hebat sekali! 🌟':p>=60?'Bagus! 👍':'Ayo coba lagi! 💪')+'</p><button class="btn" onclick="gStart(\''+g.m+'\')">🔄 Ulangi Permainan</button><button class="btn g" onclick="gMenu()">📋 Menu Game</button>';if(p>=60)confetti()}
+function gMenu(){clearInterval(gt);$('#gplay').style.display='none';$('#gmenu').style.display='block'}
+go('home');$('#splash').style.display='flex';
+</script></body></html>
